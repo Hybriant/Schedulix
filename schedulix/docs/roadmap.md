@@ -121,19 +121,21 @@ Go 基础    队列/调度   并发编程   事件/容灾   负载/万卡   Serv
 
 ---
 
-### 阶段六：Serverless 架构（pkg/gateway）
+### 阶段六：Serverless 架构（pkg/gateway + pkg/gateway_gin）
 
-**学习目标**：掌握 HTTP API 设计、Serverless 核心概念
+**学习目标**：掌握 HTTP API 设计、Serverless 核心概念、框架对比
 
 **核心知识点**：
-- net/http 标准库
+- net/http 标准库（理解底层）
+- Gin 框架（体会框架便利）
+- 两者逐项对比：路由、参数解析、验证、中间件、错误处理、测试
 - RESTful API 设计
-- 请求参数验证
+- 请求参数验证（手动 vs binding tag）
 - 冷启动 / 热启动模拟
 - 自动扩缩容逻辑
 - 依赖注入
 
-**产出**：完整的 HTTP API 网关
+**产出**：两套 HTTP API 实现（net/http + Gin），可通过配置切换
 
 ---
 
