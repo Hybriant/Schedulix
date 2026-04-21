@@ -11,10 +11,10 @@
 
     <!-- Current Metrics -->
     <div class="stats-row">
-      <StatCard icon="📋" label="Total Tasks" :value="current.total_tasks || 0" />
-      <StatCard icon="✅" label="Completed" :value="current.completed_tasks || 0" color="var(--success)" />
-      <StatCard icon="❌" label="Failed" :value="current.failed_tasks || 0" color="var(--danger)" />
-      <StatCard icon="⏱️" label="Avg Delay" :value="(current.avg_schedule_delay_ms || 0).toFixed(1) + 'ms'" />
+      <StatCard icon="TT" label="Total Tasks" :value="current.total_tasks || 0" />
+      <StatCard icon="OK" label="Completed" :value="current.completed_tasks || 0" color="var(--success)" />
+      <StatCard icon="FL" label="Failed" :value="current.failed_tasks || 0" color="var(--danger)" />
+      <StatCard icon="DLY" label="Avg Delay" :value="(current.avg_schedule_delay_ms || 0).toFixed(1) + 'ms'" />
     </div>
 
     <!-- Resource Utilization -->

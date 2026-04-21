@@ -10,7 +10,7 @@
 
 <script setup>
 defineProps({
-  icon: { type: String, default: '📊' },
+  icon: { type: String, default: 'ST' },
   label: { type: String, required: true },
   value: { type: [String, Number], required: true },
   color: { type: String, default: 'var(--text-primary)' },
@@ -21,16 +21,27 @@ defineProps({
 .stat-card {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 16px 20px;
+  gap: 14px;
+  padding: 14px 16px;
 }
 
 .stat-icon {
-  font-size: 28px;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
 }
 
 .stat-value {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 1.2;
 }

@@ -4,9 +4,9 @@
       <h2>Fault Simulator</h2>
       <div class="header-actions">
         <button v-if="!sim.running" class="btn-primary" @click="handleStart" :disabled="sim.loading">
-          {{ sim.loading ? 'Starting...' : '▶ Start Simulation' }}
+          {{ sim.loading ? 'Starting...' : 'Start Simulation' }}
         </button>
-        <button v-else class="btn-danger" @click="sim.stop()">⏹ Stop</button>
+        <button v-else class="btn-danger" @click="sim.stop()">Stop</button>
       </div>
     </div>
 

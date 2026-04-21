@@ -1,20 +1,21 @@
 :root {
-  --bg-primary: #0f0f1a;
-  --bg-secondary: #1a1a2e;
-  --bg-card: #16213e;
-  --bg-hover: #1f3460;
-  --text-primary: #e0e0e0;
-  --text-secondary: #8892a4;
-  --text-muted: #5a6577;
+  --bg-primary: #0b1220;
+  --bg-secondary: #121a2b;
+  --bg-tertiary: #182238;
+  --bg-card: #111a2e;
+  --bg-hover: #1a2640;
+  --text-primary: #e5e7eb;
+  --text-secondary: #a3afc4;
+  --text-muted: #6e7b93;
   --accent: #00d4aa;
   --accent-hover: #00f0c0;
   --danger: #ff4757;
   --warning: #ffa502;
   --info: #3498db;
   --success: #2ed573;
-  --border: #2a2a4a;
-  --radius: 8px;
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --border: #273248;
+  --radius: 10px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
 }
 
 * {
@@ -27,7 +28,7 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: var(--bg-primary);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 a {
@@ -43,10 +44,10 @@ button {
   cursor: pointer;
   border: none;
   border-radius: var(--radius);
-  padding: 8px 16px;
+  padding: 9px 16px;
   font-size: 14px;
-  font-weight: 500;
-  transition: all 0.2s;
+  font-weight: 600;
+  transition: all 0.18s ease;
 }
 
 .btn-primary {
@@ -56,6 +57,7 @@ button {
 
 .btn-primary:hover {
   background: var(--accent-hover);
+  transform: translateY(-1px);
 }
 
 .btn-danger {
@@ -64,20 +66,20 @@ button {
 }
 
 .btn-secondary {
-  background: var(--bg-hover);
+  background: var(--bg-tertiary);
   color: var(--text-primary);
   border: 1px solid var(--border);
 }
 
 .btn-secondary:hover {
-  background: var(--border);
+  background: var(--bg-hover);
 }
 
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 20px;
+  padding: 18px;
   box-shadow: var(--shadow);
 }
 
@@ -104,7 +106,7 @@ table {
 }
 
 th, td {
-  padding: 10px 14px;
+  padding: 12px 14px;
   text-align: left;
   border-bottom: 1px solid var(--border);
 }
@@ -118,7 +120,7 @@ th {
 }
 
 tr:hover {
-  background: var(--bg-hover);
+  background: rgba(26, 38, 64, 0.58);
 }
 
 input, select {

@@ -4,10 +4,10 @@
 
     <!-- Stats Row -->
     <div class="stats-row">
-      <StatCard icon="🖥️" label="Total Nodes" :value="cluster.totalNodes" color="var(--accent)" />
-      <StatCard icon="✅" label="Idle Nodes" :value="cluster.nodesByStatus.idle" color="var(--success)" />
-      <StatCard icon="⚡" label="Running Tasks" :value="tasks.tasksByStatus.running" color="var(--warning)" />
-      <StatCard icon="💾" label="Memory Usage" :value="cluster.memoryUsage + '%'" :color="memoryColor" />
+      <StatCard icon="ND" label="Total Nodes" :value="cluster.totalNodes" color="var(--accent)" />
+      <StatCard icon="ID" label="Idle Nodes" :value="cluster.nodesByStatus.idle" color="var(--success)" />
+      <StatCard icon="RN" label="Running Tasks" :value="tasks.tasksByStatus.running" color="var(--warning)" />
+      <StatCard icon="MEM" label="Memory Usage" :value="cluster.memoryUsage + '%'" :color="memoryColor" />
     </div>
 
     <!-- Cluster Heatmap -->
