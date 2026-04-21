@@ -64,6 +64,9 @@ const adminNav = [
 
 const currentRole = computed(() => getCurrentRole())
 const navItems = computed(() => (currentRole.value === ROLES.ADMIN ? adminNav : customerNav))
+const sharedSegments = customerNav
+  .map((item) => item.to.split('/')[2] || '')
+  .filter((segment) => segment && adminNav.some((adminItem) => adminItem.to.endsWith(`/${segment}`)))
 
 function handleRoleChange(event) {
   const nextRole = event.target.value
@@ -73,8 +76,7 @@ function handleRoleChange(event) {
 
   const pathSegments = route.path.split('/')
   const segment = pathSegments.length > 2 ? pathSegments[2] : ''
-  const sharedPages = ['dashboard', 'tasks']
-  if (sharedPages.includes(segment)) {
+  if (sharedSegments.includes(segment)) {
     router.push(`/${nextRole}/${segment}`)
     return
   }
