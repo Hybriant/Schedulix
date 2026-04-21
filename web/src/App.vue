@@ -8,7 +8,7 @@
         </h1>
         <p class="logo-subtitle">GPU Cluster Simulator</p>
         <div class="role-switcher">
-          <label for="role-select">Actor</label>
+          <label for="role-select">Role</label>
           <select id="role-select" :value="currentRole" @change="handleRoleChange">
             <option :value="ROLES.CUSTOMER">customer</option>
             <option :value="ROLES.ADMIN">admin</option>
@@ -71,7 +71,8 @@ function handleRoleChange(event) {
   if (nextRole === currentRole.value) return
   setCurrentRole(nextRole)
 
-  const segment = route.path.split('/')[2]
+  const pathSegments = route.path.split('/')
+  const segment = pathSegments.length > 2 ? pathSegments[2] : ''
   const sharedPages = ['dashboard', 'tasks']
   if (sharedPages.includes(segment)) {
     router.push(`/${nextRole}/${segment}`)
