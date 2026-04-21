@@ -14,7 +14,7 @@
       <StatCard icon="TT" label="Total Tasks" :value="current.total_tasks || 0" />
       <StatCard icon="OK" label="Completed" :value="current.completed_tasks || 0" color="var(--success)" />
       <StatCard icon="FL" label="Failed" :value="current.failed_tasks || 0" color="var(--danger)" />
-      <StatCard icon="LAT" label="Avg Delay" :value="(current.avg_schedule_delay_ms || 0).toFixed(1) + 'ms'" />
+      <StatCard icon="DLY" label="Avg Delay" :value="(current.avg_schedule_delay_ms || 0).toFixed(1) + 'ms'" />
     </div>
 
     <!-- Resource Utilization -->
